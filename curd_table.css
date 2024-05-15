@@ -1,0 +1,27 @@
+#body {
+    display: flex;
+}
+
+#head {
+    display: flex;
+}
+
+#left_h1 {
+    flex: 3;
+    background-color: #f0f0f0;
+}
+
+#right_wheather {
+    flex: 1;
+    background-color: #e0e0e0;
+}
+
+#curd_content {
+    flex: 3;
+    background-color: #f0f0f0;
+}
+
+#wheather_content {
+    flex: 1;
+    background-color: #e0e0e0;
+}
