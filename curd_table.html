@@ -1,85 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CRUD Table</title>
-    <script src="curd_table.js"></script>
-    <link rel="stylesheet" href="curd_table.css" />
-  </head>
-  <body onload="display_data()">
-    <center>
-      <div id="container">
-        <div id="head">
-          <div id="left_h1">
-            <h1>CRUD OPERATIONS</h1>
-          </div>
-          <div id="right_wheather">
-            <h1>Wheather</h1>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD Table</title>
+  <script src="curd_table.js"></script>
+  <link rel="stylesheet" href="curd_table.css" />
+</head>
+
+<body onload="display_data()">
+  <center>
+    <div id="container">
+      <div id="head">
+        <div id="left_h1">
+          <h1>CRUD OPERATIONS</h1>
         </div>
-        <div id="body">
-          <div id="curd_content">
-            <form onsubmit="searchData(); return false;">
-              <input
-                type="text"
-                name="rollNo"
-                id="rollNo"
-                placeholder="Enter Roll No"
-              />
-              <button type="submit">Search</button>
-            </form>
-            <br />
-            <table width="50%" border="2px" align="center">
-              <thead>
-                <tr>
-                  <th>Roll No</th>
-                  <th>Name</th>
-                  <th>Branch</th>
-                </tr>
-              </thead>
-              <tbody id="table_bdy_srch" align="center"></tbody>
-            </table>
-            <br />
-            <form onsubmit="create_data(); return false;">
-              <input
-                type="text"
-                name="roll_no"
-                id="roll_no"
-                placeholder="Enter Roll No"
-              />
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Enter Name"
-              />
-              <input
-                type="text"
-                name="branch"
-                id="branch"
-                placeholder="Enter Branch"
-              />
-              <button type="submit">Add</button>
-            </form>
-            <br />
-            <table width="50%" border="2px" align="center">
-              <thead>
-                <tr>
-                  <th>Roll No</th>
-                  <th>Name</th>
-                  <th>Branch</th>
-                  <th>Operations</th>
-                </tr>
-              </thead>
-              <tbody id="table_bdy" align="center"></tbody>
-            </table>
-          </div>
-          <div id="wheather_content">
-            <h1>wheather_content</h1>
-          </div>
+        <div id="right_wheather">
+          <input type="text" id="c1" placeholder="Enter City Name">
+          <button onclick="check_Wheather()">Check_Wheather</button>
         </div>
       </div>
-    </center>
-  </body>
+      <div id="body">
+        <div id="curd_content">
+          <form onsubmit="searchData(); return false;">
+            <input type="text" name="rollNo" id="rollNo" placeholder="Enter Roll No" />
+            <button type="submit">Search</button>
+          </form>
+          <br />
+          <table width="50%" border="2px" align="center">
+            <thead>
+              <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Branch</th>
+              </tr>
+            </thead>
+            <tbody id="table_bdy_srch" align="center"></tbody>
+          </table>
+          <br />
+          <form onsubmit="create_data(); return false;">
+            <input type="text" name="roll_no" id="roll_no" placeholder="Enter Roll No" />
+            <input type="text" name="name" id="name" placeholder="Enter Name" />
+            <input type="text" name="branch" id="branch" placeholder="Enter Branch" />
+            <button type="submit">Add</button>
+          </form>
+          <br />
+          <table width="50%" border="2px" align="center">
+            <thead>
+              <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>Operations</th>
+              </tr>
+            </thead>
+            <tbody id="table_bdy" align="center"></tbody>
+          </table>
+        </div>
+        <div id="wheather_content">
+          <h1 id="info"></h1>
+        </div>
+      </div>
+    </div>
+  </center>
+</body>
+
 </html>
