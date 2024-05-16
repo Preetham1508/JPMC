@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "roll_no": 6542,
+      "name": "Shiva",
+      "branch": "CSIT"
+    },
+    {
+      "id": "211f",
+      "roll_no": 1213,
+      "name": "Sri",
+      "branch": "IT"
+    },
+    {
+      "id": "0abd",
+      "roll_no": 6245,
+      "name": "RAM",
+      "branch": "AIML"
+    },
+    {
+      "id": "1b97",
+      "roll_no": 3333,
+      "name": "Preetham Reddy",
+      "branch": "DS"
+    },
+    {
+      "id": "5faa",
+      "roll_no": 2589,
+      "name": "Vinay Sun",
+      "branch": "CSIT"
+    }
+  ]
+}
