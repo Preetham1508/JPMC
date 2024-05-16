@@ -10,7 +10,7 @@ async function display_data() {
         <td>${element.branch}</td>
         <td align="center">
           <button onclick="delete_data(${element.id})">Delete</button>
-          <button onclick="edit_data(${element.id})">Edit</button>  
+          <button onclick="edit_data('${element.id}')">Edit</button>  
         </td>
       `;
       document.getElementById("table_bdy").appendChild(row);
@@ -30,14 +30,16 @@ async function display_data() {
   
   function edit_data(id) {
     fetch(`http://localhost:3000/users/${id}`, {
-      method: "PUT",
-      body: JSON.stringify({
-        roll_no: document.getElementById("roll_no").value,
-        name: document.getElementById("name").value,
-        branch: document.getElementById("branch").value,
-      }),
+        method: "PUT",
+        body: JSON.stringify({
+            id: id,
+            roll_no: parseInt(document.getElementById("roll_no").value),
+            name: document.getElementById("name").value,
+            branch: document.getElementById("branch").value,
+        }),
     });
-  }
+}
+
   
   function delete_data(id) {
     fetch(`http://localhost:3000/users/${id}`, {
@@ -49,7 +51,7 @@ async function display_data() {
     const rollNo = document.getElementById("rollNo").value;
     const response = await fetch(`http://localhost:3000/users`);
     const data = await response.json();
-    const student = data.find(student => student.roll_no === rollNo);
+    const student = data.find(student => student.roll_no === parseInt(rollNo));
     document.getElementById("table_bdy_srch").innerHTML = ""
     if (student) {
       const row = document.createElement("tr");
