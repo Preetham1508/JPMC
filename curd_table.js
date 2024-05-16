@@ -66,3 +66,12 @@ async function display_data() {
     }
   }
   
+  function check_Wheather() {
+    let city = document.getElementById("c1").value;
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=85cb7c5db39c8b5c45a1d585a07ab6a5&units=metric`)
+        .then(response => response.json())
+        .then(data => document.getElementById("info").innerHTML = `Temperature at ${city} is ${data.main.temp}`)
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}
