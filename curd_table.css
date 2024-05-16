@@ -16,6 +16,10 @@
     background-color: #e0e0e0;
 }
 
+#c1 {
+    margin-top: 2em;
+}
+
 #curd_content {
     flex: 3;
     background-color: #f0f0f0;
