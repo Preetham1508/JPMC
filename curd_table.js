@@ -9,7 +9,7 @@ async function display_data() {
         <td>${element.name}</td>
         <td>${element.branch}</td>
         <td align="center">
-          <button onclick="delete_data(${element.id})">Delete</button>
+          <button onclick="delete_data('${element.id}')">Delete</button>
           <button onclick="edit_data('${element.id}')">Edit</button>  
         </td>
       `;
